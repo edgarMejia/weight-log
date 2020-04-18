@@ -1,0 +1,7 @@
+{
+  "name": "weight-log",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
