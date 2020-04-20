@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Agregar una nueva tarea
+        </ion-title>
+        <ion-button slot="end" (click)="closeModal()">
+            Cerrar
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-col>
+            <form [formGroup]="todoForm">
+                <ion-item>
+                    <ion-label>
+                        Titulo:
+                    </ion-label>
+                    <ion-input type="text" formControlName="title" name="title" placeholder="Ingrese el titulo">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>
+                        Descripción:
+                    </ion-label>
+                    <ion-input type="text" formControlName="description" name="description"
+                        placeholder="Ingrese la descripción"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>
+                        Completado:
+                    </ion-label>
+                    <ion-checkbox type="text" formControlName="completed" name="title"></ion-checkbox>
+                </ion-item>
+
+                <div class="ion-margin-top">
+                    <ion-button [disabled]="todoForm.invalid" (click)="addTodo()" expand="block">
+                        Guardar tarea
+                    </ion-button>
+                </div>
+            </form>
+        </ion-col>
+    </ion-grid>
+</ion-content>
